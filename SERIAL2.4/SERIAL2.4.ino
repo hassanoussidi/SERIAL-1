@@ -1,6 +1,6 @@
 /******************************************************************
  **                                                              **       
- **                   SERIAL 2.2    Càlcul hipotenusa            ** 
+ **                   SERIAL 2.5    CAPACITAT HD LONG 2            ** 
  **                                                              ** 
  ******************************************************************/
 
@@ -8,23 +8,26 @@
 
 
 //***************  VARIABLES  **************************************
-  int a = 3;
-  int b = 4;
-  int h;
+  int drive_gb = 100;
+  long drive_mb;   // Canviem la variable de  "int" a "long" per mostrar el valor en MB correcte
 
 
 //***************  SETUP   ****************************************
 void setup() {
-    Serial.begin(9600);     // carrega Serial lliberia comunicació monitor at 9600 bps
-    
-    Serial.print("a = ");
-    Serial.println(a);
-    Serial.print("b = ");
-    Serial.println(b);
-    Serial.println("La hipotenusa d'aquest tringle és: ");
-    Serial.println("h = sqrt (pow (a,2)+ pow (b,2)) ");
-     h = sqrt (pow (a,2)+pow (b,2));
-    Serial.println(h);
+   Serial.begin(9600);     // carrega Serial library at 9600 bps
+  Serial.print("Your HD is ");
+  Serial.print(drive_gb);   // imprimeix per pantalla el valor de drive_gb
+  Serial.println(" GB large.");
+  
+  drive_mb = drive_gb;
+  drive_mb = drive_mb * 1024;    // Conversió de GB a MB de la variable drive_gb
+
+
+  
+
+  Serial.print("Este equival a  ");
+  Serial.print(drive_mb);     // imprimeix per pantalla el valor de drive_mb
+  Serial.println(" Megabytes!");
 
  
 }

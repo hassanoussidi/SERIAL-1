@@ -1,6 +1,6 @@
 /******************************************************************
  **                                                              **       
- **                   SERIAL 2.2    Càlcul hipotenusa            ** 
+ **                   SERIAL 2.5    CAPACITAT HD LONG 2            ** 
  **                                                              ** 
  ******************************************************************/
 
@@ -8,23 +8,20 @@
 
 
 //***************  VARIABLES  **************************************
-  int a = 3;
-  int b = 4;
-  int h;
+  int test = 32767;
 
 
 //***************  SETUP   ****************************************
 void setup() {
-    Serial.begin(9600);     // carrega Serial lliberia comunicació monitor at 9600 bps
-    
-    Serial.print("a = ");
-    Serial.println(a);
-    Serial.print("b = ");
-    Serial.println(b);
-    Serial.println("La hipotenusa d'aquest tringle és: ");
-    Serial.println("h = sqrt (pow (a,2)+ pow (b,2)) ");
-     h = sqrt (pow (a,2)+pow (b,2));
-    Serial.println(h);
+   Serial.begin(9600);     // carrega Serial library at 9600 bps
+  Serial.print("Test value is: ");
+  Serial.println(test);
+
+  test = test + 1;
+ 
+  Serial.print("Now it is ");
+  Serial.println(test);
+
 
  
 }
