@@ -22,8 +22,8 @@ void setup() {
     Serial.print("b = ");
     Serial.println(b);
     Serial.println("La hipotenusa d'aquest tringle és: ");
-    Serial.print("h = sqrt( pow (a,2)+ pow (b,2)) ");
-     h = (sqrt (pow (a,2)+(pow (b,2)));
+    Serial.println("h = sqrt (pow (a,2)+ pow (b,2)) ");
+     h = sqrt (pow (a,2)+pow (b,2));
     Serial.println(h);
 
  
