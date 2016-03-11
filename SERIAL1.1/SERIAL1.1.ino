@@ -18,7 +18,7 @@ void setup()                // s'executa un cop quan comenÃ§a el run once, whe
 
 
 
-
+}
   //*************    LOOP   ******************************************
   void loop()   // s'executa repetidament una vegada rere una altra
   {
