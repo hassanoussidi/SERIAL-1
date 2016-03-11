@@ -1,6 +1,6 @@
 /******************************************************************
  **                                                              **       
- **                   SERIAL 4.1 ESTRUCTURES IF                       ** 
+ **                   SERIAL 4.8 ESTRUCTURES WHILE COMPTADOR       ** 
  **                                                              ** 
  ******************************************************************/
 
@@ -9,16 +9,25 @@
 
 //***************  VARIABLES  **************************************
 
-int tempAigua = 99;           // Variable tempAigua igual a 101
+int comptar = 11; // Variable comptar
+int i = 0;
+    
 //***************  SETUP   ****************************************
 void setup() {
   
   Serial.begin(9600);     // set up Serial library at 9600 bps
-
-  if ( tempAigua > 100) // Si tempAigua es superior a 100 
+ Serial.begin(9600);     // set up Serial library at 9600 bps
+  Serial.print("Ara comptare de 0 a ");
+  Serial.println(comptar);  
+   while(i <= comptar)
   {
-    Serial.print("Aigua supera els 100C, esta bullint!"); // Escriu el missatge
+    Serial.print(i);
+    Serial.print("-");
+    i++;
   } 
+
+    
+  
 
 }
 
